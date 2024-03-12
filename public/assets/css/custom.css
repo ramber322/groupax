@@ -1,0 +1,69 @@
+
+/* Add your CSS styles here */
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.contain {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+.g1 {
+    border: 1px solid white;
+    grid-column: 1 / 2;
+}
+
+mid {
+    grid-column: 2 / 3;
+    border: 2px solid black;
+}
+
+.g2 {
+    grid-column: 3 / 4;
+    width: 260px;
+}
+
+.navbar {
+    height: 60px;
+    background: darkslategray;
+}
+
+.yes1 {
+    border: 1px solid black;
+    height: 595px;
+    display: inline-block;
+    text-align: justify;
+}
+
+.ulvnavbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.vnavbar a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.vnavbar a.active {
+    background-color: #663399;
+    color: white;
+}
+
+.vnavbar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
