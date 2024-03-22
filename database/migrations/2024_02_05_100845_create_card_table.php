@@ -14,11 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('card', function (Blueprint $table) {
-            $table->id('Student_ID');
+            $table->id('Card_ID');
             $table->string('username');
             $table->string('password');
             $table->string('email');
             $table->integer('balance');
+            $table->integer('Student_ID');
             $table->timestamps();
         });
     }

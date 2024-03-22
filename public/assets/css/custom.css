@@ -31,7 +31,7 @@ mid {
 }
 
 .navbar {
-    height: 60px;
+    height: 50px;
     background: darkslategray;
 }
 
@@ -51,11 +51,13 @@ mid {
     font-weight: bold;
 }
 
+
 .vnavbar a {
     display: block;
     color: #000;
     padding: 8px 16px;
-    text-decoration: none;
+    text-decoration: none;  
+    
 }
 
 .vnavbar a.active {
@@ -64,6 +66,36 @@ mid {
 }
 
 .vnavbar a:hover:not(.active) {
-    background-color: #555;
+    background-color: #2e1a1a;
     color: white;
 }
+
+.vnavbar li {
+   margin-left: 20px
+
+}
+
+
+.productdisplay{
+    background-image: url('https://cdn-icons-png.flaticon.com/512/14025/14025227.png');
+    background-color: black;
+    height: 100px; width:150px; border: 2px solid white;
+    margin: 10px;
+}
+.productdisplay p {
+    margin-left: 5px; color: white;
+     font-size: 20px; 
+}
+.productdisplay img {
+    position: fixed; width: 40px; height: 40px; margin-left: 100px; margin-top: 48px; 
+}
+
+
+.nav-item {
+    color:white;
+}
+
+.navbar-nav a {
+color: white
+}
+
