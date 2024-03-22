@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->id('Order_ID');
             $table->integer('total_cost');
+             
 
 
-            $table->unsignedBigInteger('Student_ID');
-            $table->foreign('Student_ID')->references('Student_ID')->on('card');
+            $table->unsignedBigInteger('Card_ID');
+            $table->foreign('Card_ID')->references('Card_ID')->on('card');
         });
     }
 

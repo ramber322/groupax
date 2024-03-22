@@ -1,13 +1,38 @@
-@extends('layout.layout')
+@extends('layout.dashboard')
 
 
 
 @section('content')
-<div class ="coke" style ="height: 100px; width:150px; border: 2px solid white; margin: 10px; "> 
-<h1> Prod1 </h1>
+
+<div class ="productdisplay">
+<img src ="https://cdn-icons-png.freepik.com/512/883/883806.png"> 
+<p> Product 1 </p>
+<p> 20 </p>
 </div>
 
-<div class ="coke" style ="height: 100px; width:150px; border: 2px solid white; margin: 10px; "> 
-<h1> Prod2 </h1>
+<div class ="productdisplay">
+<img src ="https://cdn-icons-png.freepik.com/512/883/883806.png"> 
+<p> Product 1 </p>
+<p> 20 </p>
 </div>
+
+<div class ="productdisplay">
+<img src ="https://cdn-icons-png.freepik.com/512/883/883806.png"> 
+<p> Product 1 </p>
+<p> 20 </p>
+</div>
+
+<div class ="productdisplay">
+<img src ="https://cdn-icons-png.freepik.com/512/883/883806.png"> 
+<p> Product 1 </p>
+<p> 20 </p>
+</div>
+
+<div class ="productdisplay">
+<img src ="https://cdn-icons-png.freepik.com/512/883/883806.png"> 
+<p> Product 1 </p>
+<p> 20 </p>
+</div>
+
+
 @endsection
