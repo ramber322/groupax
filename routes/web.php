@@ -5,13 +5,7 @@ use App\Http\Controllers\ShowController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserxController;
 use App\Http\Controllers\DashboardController;
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
-//EACH TIME U HAVE A CONTROLLER PUT THIS HERE
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,13 +17,15 @@ use App\Http\Controllers\DashboardController;
 |
 */
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login');
 });
 
 
 Route::get('dashboard', function () {
     return view('dashboard');
 });
+
+
 
 Route::get('users', function () {
     return view('users');
@@ -43,6 +39,18 @@ Route::get('home.blade.php', function () {
     return view('home');
 });
 
+Route::get('login', function () {
+    return view('login');
+});
+
+Route::get('ctdrinks', function () {
+    return view('ctdrinks');
+});
+
+Route::get('ctchips', function () {
+    return view('ctchips');
+});
+
 
 //productcontroller methods index-to display. store to store into table using form request
 Route::get('products.blade.php', [ProductController::class, 'index']);
@@ -52,3 +60,4 @@ Route::get('users', [UserxController::class, 'index']);
 Route::get('dashboard', [DashboardController::class, 'index']);
 
 
+Route::get('dashboard', [DashboardController::class, 'login'])->name('dashboard');

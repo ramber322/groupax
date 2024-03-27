@@ -13,4 +13,10 @@ class DashboardController extends Controller
         $products = Product::where('Category', 'Foods')->get();
         return view('dashboard', compact('products'));
     }
+
+    public function login()
+    {
+        return view('dashboard');
+    }
+
 }
