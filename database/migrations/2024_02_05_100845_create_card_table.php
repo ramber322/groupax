@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('email');
             $table->integer('balance');
-            $table->integer('Student_ID');
+            $table->string('Student_ID', 10); 
             $table->timestamps();
         });
     }
