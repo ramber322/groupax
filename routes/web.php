@@ -51,6 +51,13 @@ Route::get('ctchips', function () {
     return view('ctchips');
 });
 
+Route::get('mb', function () {
+    return view('mb');
+});
+
+Route::get('mbTransact', function () {
+    return view('mbTransact');
+});
 
 //productcontroller methods index-to display. store to store into table using form request
 Route::get('products.blade.php', [ProductController::class, 'index']);

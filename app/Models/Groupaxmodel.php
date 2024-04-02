@@ -9,4 +9,6 @@ class Groupaxmodel extends Model
 {
     use HasFactory;
     protected $table = 'groupaxmodels';
+    
+
 }

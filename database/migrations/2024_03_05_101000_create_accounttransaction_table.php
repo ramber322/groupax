@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('accounttransaction', function (Blueprint $table) {
             $table->id('Transaction_ID');
-            $table->integer('Student_ID');
+            $table->string('Student_ID', 10);
             $table->integer('Amount');
             $table->unsignedBigInteger('Payment_Method_ID');
             $table->foreign('Payment_Method_ID')->references('Payment_Method_ID')->on('paymentmethod');
