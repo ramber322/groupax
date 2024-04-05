@@ -5,7 +5,7 @@
 <style>
 
 body {
-	background-color: #00008B;
+  background: rgb(53, 38, 87);
 	
 }
 .flex-container-parent-left {
@@ -48,7 +48,7 @@ body {
 .boxnum2white {
 	width:60px;
 	height:60px;
-	background-color:	#7393B3	;
+  background: rgb(53, 38, 87);
 	border: 1px solid white;
 }
 
@@ -149,7 +149,11 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);"> LOGIN </h1>
 
-
+<a href = "{{ route('mb')}}">
+<img src="https://cdn-icons-png.freepik.com/512/0/23.png?ga=GA1.1.1871801219.1712326061&" style ="height: 25px; width: 25px; position: fixed;  bottom: 0%;
+  left: 1%;
+  transform: translate(-50%, -50%);">
+</a>
 
 <div class ="form-center">
 
