@@ -32,7 +32,7 @@ mid {
 
 .navbar {
     height: 50px;
-    background: darkslategray;
+    background: rgb(53, 38, 87);
 }
 
 .yes1 {
@@ -77,11 +77,17 @@ mid {
 
 
 .productdisplay{
-    background-image: url('https://cdn-icons-png.flaticon.com/512/14025/14025227.png');
-    background-color: black;
+    background-image: url('/assets/images/test125.png');
+   background-color: rgb(33, 19, 66);
+   
     height: 100px; width:150px; border: 2px solid white;
     margin: 10px;
+    
+    
 }
+
+
+
 .productdisplay p {
     margin-left: 5px; color: white;
      font-size: 20px; 

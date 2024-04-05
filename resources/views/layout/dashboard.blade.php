@@ -19,7 +19,7 @@
                     <a class="nav-link" href="users">Users</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="products.blade.php">Products</a>
+                    <a class="nav-link" href="products">Products</a>
                 </li>
             </ul>
         </div>
@@ -38,7 +38,7 @@
         </ul>
     </div>
 
-    <div style="background: #36454F ; display:flex;flex-wrap:wrap;align-content:start;height:100vh;">
+    <div style=" background: #36454F;  display:flex;flex-wrap:wrap;align-content:start;height:100vh;">
         @yield ('content')
     </div>
 
@@ -122,14 +122,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Purchase Complete</h5>
+               
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body" style ="justify-content: center; align-items: center; text-align: center;" >
                
                 <h3>Purchase Complete</h2>
+                <img style ="height: 70px; width: 70px; " src ="{{asset('assets/images/check_icon.png')}}"> 
             </div>
         </div>
     </div>

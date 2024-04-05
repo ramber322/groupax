@@ -35,13 +35,10 @@ Route::get('products', function () {
     return view('products');
 });
 
-Route::get('home.blade.php', function () {
-    return view('home');
-});
+Route::get('/login', function () {
+    return view('login');})->name('login');
 
-Route::get('login', function () {
-    return view('login');
-});
+
 
 Route::get('ctdrinks', function () {
     return view('ctdrinks');
@@ -51,20 +48,22 @@ Route::get('ctchips', function () {
     return view('ctchips');
 });
 
-Route::get('mb', function () {
-    return view('mb');
-});
+Route::get('/mb', function () {
+    return view('mb');})->name('mb');
 
-Route::get('mbTransact', function () {
-    return view('mbTransact');
-});
+Route::get('/mbTransact', function () {
+    return view('mbTransact');})->name('mbTransact');
+
+
+Route::get('/mbInfo', function () {
+return view('mbInfo');})->name('mbInfo');;
 
 //productcontroller methods index-to display. store to store into table using form request
-Route::get('products.blade.php', [ProductController::class, 'index']);
-Route::post('products.blade.php', [ProductController::class, 'store'])->name('products.store');
+Route::get('/products', [ProductController::class, 'index']);
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
-Route::get('users', [UserxController::class, 'index']);
-Route::get('dashboard', [DashboardController::class, 'index']);
+Route::get('/users', [UserxController::class, 'index']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
 
 
-Route::get('dashboard', [DashboardController::class, 'login'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'login'])->name('dashboard');

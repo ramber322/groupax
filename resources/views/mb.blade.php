@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
- 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
   body, html {
     margin: 0;
@@ -13,25 +13,71 @@
     overflow: hidden; /* Prevent scrolling */
   }
 
-  .centered-div {
-    width: 100vw; /* 100% of viewport width */
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .container {
+    max-width: 350px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+	
+	background: black;
+	 overflow:hidden;
+	 height: 100%;
   }
 
-  .content {
-    overflow:hidden;
-    width: 80%; /* Adjust this value as needed */
-    max-width: 350px; /* Adjust this value as needed */
-    height: 100%;
-    border: 1px solid black;
-    position: relative; /* Added for absolute positioning */
-    background: linear-gradient(to bottom, #E6E6FA 50%,#00008B 50%);
+  .top-section {
+    height: 50%; /* 50% height of the viewport */
+    background-color: #E6E6FA;
   }
-  
-  .circle-img {
+
+  .bottom-section {
+    position: relative;
+    height: 50%; /* 50% height of the viewport */
+    background: rgb(53, 38, 87);
+    display: flex;
+    justify-content: center; /* Horizontally center the triangles */
+    align-items: flex-start; /* Align rectangles to top edge */
+  }
+
+  .reversed-triangle {
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent; /* Adjust size of the triangles */
+    border-right: 75px solid transparent; /* Adjust size of the triangles */
+    position: relative;
+    margin: 0 10px; /* Add margin to create space between triangles */
+  }
+
+  .reversed-triangle:first-child {
+    border-top: 160px solid #E6E6FA; /* Adjust size of the triangles */
+  }
+
+  .reversed-triangle:last-child {
+    border-top: 160px solid #E6E6FA; /* Adjust size of the triangles */
+  }
+
+  @media only screen and (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    .top-section, .bottom-section {
+      height: 50vh;
+    }
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+  .petot {
+    position: fixed;
+	
+    top: 25%; /* Moves the div down by half of its height */
+    left: 49%; /* Moves the div right by half of its width */
+    transform: translate(-50%, -50%); /* Centers the div */
+    text-align: center; /* Centers the content horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	font-family: Arial, Helvetica, sans-serif;
+	  font-weight: bold;
+	 font-size: 39px;
+	 margin: 0; /* Override Bootstrap margin */
+  }
+ .circle-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -42,98 +88,89 @@
    
     z-index: 3; /* Increase the z-index to ensure it's above other elements */
 }
-
-
-  .triangle {
-    width: 0;
-    height: 0;
-    border-left: 87px solid transparent;
-    border-right: 87px solid transparent;
-    border-top: 150px solid #E6E6FA; /* Adjust color and size as needed */
-    margin-bottom: 171px;
-  }
-
-  .rectangles {
-    width: 80%; /* Adjust this value as needed */
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  /* Custom styles for modal */
-  .modal-content {
-    width: 80%; /* Adjust this value as needed */
-    max-width: 350px; /* Adjust this value as needed */
-    margin: auto;
-	margin-top: 150px;
-  }
-::-webkit-scrollbar {
-    display: none;
-}
 .circle-img:hover {
     transform: scale(1.1); /* Increase the size on hover */
     transition: transform 0.3s ease; /* Add smooth transition */
     cursor: pointer; /* Change cursor to pointer on hover */
   }
+  
+   .modal-content {
+    width: 80%; /* Adjust this value as needed */
+    max-width: 350px; /* Adjust this value as needed */
+    margin: auto;
+	margin-top: 150px;
+  }
+  
+  .popover-link {
+    font-size: 15px;
+	color: black;
+	justify-content: center;
+	font-weight: bold;
+	
+    color: inherit; /* Use the default text color */
+	
+}
 </style>
 </head>
 <body>
-<div class="centered-div">
-  <div class="content">
-    <div class="rectangles">
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-    </div>
-    <div class="circle-img mx-auto mb-3" id="circle-img" data-toggle="popover">
+
+<div class="container">
+
+  
+  <div class="top-section">
+  
+  <div class="circle-img mx-auto mb-3" id="circle-img" data-toggle="popover">
       <img src="https://cdn-icons-png.freepik.com/512/552/552721.png?ga=GA1.2.1745870953.1711975251&" class="img-fluid" alt="Profile Picture">
     </div>
 	
-	  <div class ="walletbalance" style =" 
-  width: 50%;
-  height: 50px;
-  position: fixed;
-  align-items:center;
-  margin-top: 80px;
-   margin-left: 90px;
-  margin-right: auto;
-  " >
-   <h1 style ="margin-left: 10px;" > <img style = "width: 40px; height: 40px; margin-bottom: 13px; margin-right: 8px;" src ="https://cdn-icons-png.freepik.com/512/6897/6897755.png?ga=GA1.1.1745870953.1711975251&">500 </h1>
-	</div>  <!-- walletbalanceend -->
-	
-	<div class ="displayedpurchases" style =" position: fixed;  height: 200px; width: 220px;margin-left: 65px;
-  margin-right: auto; margin-top: 170px; display: flex; justify-content: center; /* align item horizontally */
-        align-items: center; flex-direction: column;" >
-  
-  <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; ">
-  new purchase
-  </button>
+  <div class ="petot" style ="position: fixed; "> 
+  <img style = "width: 40px; height: 40px; margin-right: 5px; margin-bottom: 20px;" src ="https://cdn-icons-png.freepik.com/512/6897/6897755.png?ga=GA1.1.1745870953.1711975251&"> 
+  <p>500 </p>
   </div>
   
-  <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; ">
-  new purchase
-  </button>
-  </div>
-   <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; ">
-  new purchase
-  </button>
-  </div>
+  </div><!--ENDING TOP SECTION -->
   
-  </div>  <!--displayedpurcahsesend -->
+  <div class="bottom-section">
+    <div class="reversed-triangle"></div>
+    <div class="reversed-triangle"></div>
+  </div> <!--ENDING BOT SECTION-->
 
-  <div style="position: fixed; width: 200px; height: 45px; margin-left: 75px; margin-right: auto; bottom: 90px; display: flex; justify-content: center; align-items: center; background: #36454F; border: 1px solid white;">
-    <a href="mbTransact" style="text-decoration: none; color: white; font-size: 18px; cursor: pointer; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">Transaction History</a>
+ <div style="position: fixed; width: 200px; height: 45px;  margin-left: 60px; bottom: 90px; display: flex; justify-content: center; align-items: center; background: #36454F; border: 1px solid white;">
+    <a href="{{ route('mbTransact') }}" style="text-decoration: none; color: white; font-size: 18px; cursor: pointer; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">Transaction History</a>
 </div>
 
-  </div> <!--container end -->
+<div class ="threedots" style ="width: 100px; position: relative; bottom: 50px; justify-content: center; left: 39%; " >
+    <i class="fa fa-circle" style ="color: white;  "></i>
+    <i class="fa fa-circle" style ="color: white; margin-left: 8px;" ></i>
+    <i class="fa fa-circle" style ="color: white; margin-left: 8px;" ></i>
+</div>
+
+<div class ="displayedpurchases" style =" position: fixed;  height: 190px; width: 220px;margin-left: 50px;
+ top: 32%; display: flex; justify-content: center; /* align item horizontally */
+        align-items: center; flex-direction: column;" >
+  
+  <div class ="purchasenotify" style="margin-bottom: 10px; ">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; border-radius: 100px; ">
+  new purchase
+  </button>
+  </div>
+  
+  <div class ="purchasenotify" style="margin-bottom: 10px; ">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F;border-radius: 100px; ">
+  new purchase
+  </button>
+  </div>
+  
+  <div class ="purchasenotify" style="margin-bottom: 10px;">
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; border-radius: 100px; ">
+  new purchase
+  </button>
+  </div>
   
   
-   <!-- Modal -->
+  
+  </div><!--ENDING displayedpurchases -->
+ <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -181,10 +218,13 @@
 </div>
   
   
-  
-  <!-- Hidden Popover Content -->
+ <!-- Hidden Popover Content -->
   <div id="popover-content" class="d-none">
-    <a href="login">LOGOUT</a><br>
+  <div class ="popoverdiv" style ="justify-content: Center; align-items: center; background: black; border: 3px solid black; width: 200px;">
+     
+	 <a class="popover-link" href="{{ route('mbInfo') }}">INFO</a><br>
+	 <a class="popover-link" href="{{ route('login') }}">LOGOUT</a>
+	 </div>
   </div>
   <!-- Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -201,6 +241,9 @@
       });
     });
   </script>
-</div>
+
+
+
+</div><!--ENDING CONTAINER-->
 </body>
 </html>

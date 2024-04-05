@@ -100,6 +100,16 @@
     margin: auto;
 	margin-top: 150px;
   }
+  .info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.label {
+    margin-right: 10px;
+}
 </style>
 </head>
 <body>
@@ -110,7 +120,7 @@
   <div class="top-section">
   
   <div class="circle-img mx-auto mb-3" id="circle-img">
-    <a href ="{{ route ('mb') }} "> <img src="https://cdn-icons-png.freepik.com/512/13742/13742341.png?ga=GA1.1.1730158141.1712038229&" class="img-fluid" alt="Back"> </a>
+    <a href ="{{ route('mb') }}"> <img src="https://cdn-icons-png.freepik.com/512/13742/13742341.png?ga=GA1.1.1730158141.1712038229&" class="img-fluid" alt="Back"> </a>
     </div>
 	
  
@@ -126,60 +136,78 @@
 
 
 
-<div class ="displayedpurchases" style =" position: fixed;  height: 190px; width: 220px;margin-left: 50px;
- top: 32%; display: flex; justify-content: center; /* align item horizontally */
-        align-items: center; flex-direction: column;" >
+<div class ="displayedpurchases" style =" position: fixed;  height: 190px; width: 280px; margin-left: 15px;
+ top: 17%; display: flex; justify-content: space-between; /* align item horizontally */
+        flex-direction: column;" >
   
-  <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; border-radius: 100px; ">
-  new balance +50..
-  </button>
-  </div>
-  
-  <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F; border-radius: 100px;">
-  your remaining balance..
-  </button>
-  </div>
-  
-  <div class ="purchasenotify" style="margin-bottom: 10px;">
-	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style ="width: 200px; background: #36454F;  border-radius: 100px; ">
-  your purchased..
-  </button>
-  </div>
-  
-  
-  
-  </div><!--ENDING displayedpurchases -->
+<div class="info">
+    <p class="label">USERNAME:</p>
+    <p class="value">Judas</p>
+</div>
 
+<div class="info">
+    <p class="label">PASSWORD:</p>
+    <p class="value">*******</p>
+</div>
+<div class="info">
+    <p class="label">EMAIL:</p>
+    <p class="value">star23@gmail.com</p> 
+</div>
+<div class="info">
+    <p class="label">ID:</p>
+    <p class="value">2022-00383</p>
+</div>
+<div class="info">
+    <p class="label">BALANCE:</p>
+    <p class="value">500</p>
+</div>
+  
+
+
+  </div><!--ENDING displayedpurchases -->
   <div class ="threedots" style ="width: 100px; position: relative; bottom: 50px; justify-content: center; left: 39%; " >
     <i class="fa fa-circle" style ="color: white;  "></i>
     <i class="fa fa-circle" style ="color: white; margin-left: 8px;" ></i>
     <i class="fa fa-circle" style ="color: white; margin-left: 8px;" ></i>
 </div>
+
  <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">New Balance</h1>
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Purchased Items</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
 	  
 	  
 	<div style="display: flex; justify-content: space-between;">
-    <p>Amount</p>
-    <p>50</p>
+    <p>Coke</p>
+    <p>20</p>
     </div>
 	
+	<div style="display: flex; justify-content: space-between;">
+    <p>Spaghetti</p>
+    <p>75</p>
+    </div>
 	
+	<div style="display: flex; justify-content: space-between;">
+    <p>Cobra</p>
+    <p>25</p>
+    </div>
+	
+	<div style="display: flex; justify-content: space-between;">
+    <p>Tempura</p>
+    <p>30</p>
+    </div>
+	 
 	 
 	 
 	 <hr>  
 	 <div style="display: flex; justify-content: space-between;">
-    <h1>Balance:</h1>
-    <h1>500</h1>
+    <h1>Total</h1>
+    <h1>150</h1>
     </div>
 	 
 
@@ -190,12 +218,14 @@
   </div>
 </div>
   
-  
 
   <!-- Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Initialize Popover -->
+  
+
 
 
 </div><!--ENDING CONTAINER-->
