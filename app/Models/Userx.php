@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Userx extends Model
 {
     use HasFactory;
-    protected $table = 'userx'; // Name of your database table
+    protected $table = 'card'; // Name of your database table
 }

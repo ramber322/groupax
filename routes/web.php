@@ -27,9 +27,6 @@ Route::get('dashboard', function () {
 
 
 
-Route::get('users', function () {
-    return view('users');
-});
 
 Route::get('products', function () {
     return view('products');
@@ -58,12 +55,19 @@ Route::get('/mbTransact', function () {
 Route::get('/mbInfo', function () {
 return view('mbInfo');})->name('mbInfo');;
 
+
+Route::get('/dashboard', [DashboardController::class, 'index']);
 //productcontroller methods index-to display. store to store into table using form request
 Route::get('/products', [ProductController::class, 'index']);
 Route::post('/products', [ProductController::class, 'store'])->name('products.store');
 
-Route::get('/users', [UserxController::class, 'index']);
-Route::get('/dashboard', [DashboardController::class, 'index']);
+
+Route::get('/users', [UserxController::class, 'index'])->name('users.index');
+Route::post('/users', [UserxController::class, 'createUser'])->name('users.createUser');
+
 
 
 Route::get('/dashboard', [DashboardController::class, 'login'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'showFoods'])->name('dashboard');
+Route::get('/ctchips', [DashboardController::class, 'showChips'])->name('ctchips');
+Route::get('/ctdrinks', [DashboardController::class, 'showDrinks'])->name('ctdrinks');

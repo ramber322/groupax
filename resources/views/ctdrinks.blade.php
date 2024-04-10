@@ -1,30 +1,16 @@
-@extends('layout.dashboard')
+@extends('layout.dashboardlayout')
 
 
 
 @section('content')
 
-<div class ="productdisplay">
-<img src ="{{asset('assets/images/soda_transparent.png')}}"> 
-<p> Product 1 </p>
-<p> 20 </p>
-</div>
-
-<div class ="productdisplay">
-<img src ="{{asset('assets/images/soda_transparent.png')}}"> 
-<p> Product 2 </p>
-<p> 20 </p>
-</div>
-
-<div class ="productdisplay">
-<img src ="{{asset('assets/images/soda_transparent.png')}}"> 
-<p> Product 3 </p>
-<p> 20 </p>
-</div>
-
-
-
-
+@foreach($drinks as $product)
+<div class="productdisplay">
+        <img  src="{{ asset('assets/images/soda_transparent.png') }}">
+        <p>{{ $product->Product_Name }}</p>
+        <p>{{ $product->Price }}</p>
+    </div>
+    @endforeach
 
 
 @endsection

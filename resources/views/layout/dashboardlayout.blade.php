@@ -43,6 +43,9 @@
     </div>
 
     <div class="g2">
+
+
+    
         <table class="table">
             <thead>
                 <tr>

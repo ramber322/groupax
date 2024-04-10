@@ -1,26 +1,20 @@
-@extends('layout.dashboard')
+@extends('layout.dashboardlayout')
 
 
 
 @section('content')
 
-<div class ="productdisplay">
-<img class ="chipsimg" src ="{{asset('assets/images/chips_transparent.png')}}" >
-<p> Product 1</p>
-<p> 20 </p>
-</div>
+@foreach($chips as $product)
+<div class="productdisplay">
+        <img class ="chipsimg" src="{{ asset('assets/images/chips_transparent.png') }}">
+        <p>{{ $product->Product_Name }}</p>
+        <p>{{ $product->Price }}</p>
+    </div>
+    @endforeach
 
-<div class ="productdisplay">
-<img class ="chipsimg" src ="{{asset('assets/images/chips_transparent.png')}}" >
-<p> Product 2</p>
-<p> 20 </p>
-</div>
 
-<div class ="productdisplay">
-<img class ="chipsimg" src ="{{asset('assets/images/chips_transparent.png')}}" >
-<p> Product 3</p>
-<p> 20 </p>
-</div>
+
+
 
 
 
