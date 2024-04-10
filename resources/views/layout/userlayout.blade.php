@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -43,8 +44,8 @@
   <thead>
     <tr>
       <th scope="col" style="width:100px;">ID</th>
-      <th scope="col" style="width:240px;">Username</th>
-      <th scope="col">Email</th>
+      <th scope="col" style="width:240px;"><div style = "margin-left:25px;">Username</div></th>
+      <th scope="col" ><div style = "margin-left:80px;">Email </div> </th>
       <th scope="col">Balance</th>
       <th scope="col">Action</th>
     </tr>
@@ -75,6 +76,8 @@
       </div>
       <div class="modal-body">
 
+      <form action="{{ route('users.createUser') }}" method="post">
+      @csrf
   <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Username</label>
   <input type="text" class="form-control" name="username" placeholder="">
@@ -82,7 +85,7 @@
 
   <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Password</label>
-  <input type="text" class="form-control" name="password" placeholder="">
+  <input type="password" class="form-control" name="password" placeholder="">
   </div>
 
   <div class="mb-3">
@@ -97,14 +100,15 @@
 
   <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Student ID</label>
-  <input type="text" class="form-control" name="stu" placeholder="2022-XXXX">
+  <input type="text" class="form-control" name="stud_id" placeholder="2022-XXXX">
   </div>
 
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Create</button>
+        </form>
       </div>
     </div>
   </div>

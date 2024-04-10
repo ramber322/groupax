@@ -5,10 +5,10 @@
 @foreach ($users as $user)
 <tr>
                     
-                    <td>{{ $user->id }}</td>
-                    <td>{{ $user->username }}</td>
-                    <td>{{ $user->password }}</td>
-                    <td>{{ $user->role }}</td>
+                    <td>{{ $user->Card_ID }}</td>
+                    <td ><div style ="text-align:center; width: 120px;"> {{ $user->username }} </div> </td>
+                    <td><div style ="text-align: center; width: 200px; ">{{ $user->email }}</div></td>
+                    <td style ="margin-left: 20px;" >{{ $user->balance }}</td>
                     <td>Delete</td>
                   
                  

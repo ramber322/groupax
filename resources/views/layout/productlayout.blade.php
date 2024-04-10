@@ -93,7 +93,7 @@
 		    <select class="form-control" name="category">
            <option value="Drinks">Drinks</option>
            <option value="Foods">Foods</option>
-           <option value="Junks">Junks</option>
+           <option value="Chips">Chips</option>
 		    </select>
 	           </div>
 
