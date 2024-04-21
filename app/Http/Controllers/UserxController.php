@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Userx;
-
+use Illuminate\Support\Facades\Hash; // Import Hash class
 
 class UserxController extends Controller
 {
@@ -28,7 +28,7 @@ class UserxController extends Controller
         // Create a new product instance
         $users = new Userx();
         $users->username = $request->username;
-        $users->password = $request->password;
+        $users->password =  Hash::make($request->password);
         $users->email = $request->email;
         $users->balance = $request->balance;
         $users->Student_ID = $request->stud_id;
